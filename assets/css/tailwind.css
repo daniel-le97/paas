@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.flex-col-center{
+  @apply flex flex-col items-center justify-center
+}
+.flex-row-center{
+  @apply flex items-center justify-center
+}
+
+a{
+ text-decoration: none !important;
+}
+
+/* TO ACCOUNT FOR NAVBAR HEIGHT */
+main{
+  @apply  pt-28 min-h-screen ;
+}
+
+img{
+  @apply hover:brightness-75 transition-all duration-300 ease-linear rounded-md shadow-md
+}
+
+
+.gradient-text {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(var(--s)) 0%,
+    hsl(var(--sf)) 9%,
+    hsl(var(--pf)) 42%,
+    hsl(var(--p)) 47%,
+    hsl(var(--a)) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.712);
+  text-stroke: 1px rgba(0, 0, 0, 0.459);
+}
+
+.background-gradient {
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--s)) 0%,
+    hsl(var(--sf)) 9%,
+    hsl(var(--pf)) 42%,
+    hsl(var(--p)) 47%,
+    hsl(var(--a)) 100%
+  );
+}
+
+ .text-shadow{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* For WebKit-based browsers (Chrome, Safari) */
+/* Customize the scrollbar itself */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Customize the scrollbar track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+/* On hover, make the thumb a bit darker */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  transition: all 0.5s ease;
+}
