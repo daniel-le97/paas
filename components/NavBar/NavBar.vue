@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ThemeButton from './ThemeButton.vue'
-import SearchBar from './SearchBar.vue'
 import ProfileDropdown from './ProfileDropdown.vue'
 
 const { session } = useAuth()
@@ -112,7 +111,6 @@ onBeforeUnmount(() => {
       </ul>
     </div>
     <div class="navbar-end space-x-4">
-      <SearchBar />
       <ThemeButton />
       <ProfileDropdown v-if="session?.user" />
     </div>

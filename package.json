@@ -3,8 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "bun --bun nuxt build",
+    "dev": "bun --bun nuxt dev",
     "generate:client": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -12,21 +12,20 @@
     "studio": "drizzle-kit studio",
     "push": "drizzle-kit push:pg",
     "sync": "pnpm run generate:server && pnpm run push",
-    "upgrade": "pnpm dlx taze major -w && pnpm i",
+    "upgrade": "bun update && bunx taze -w && bunx taze major -w && bunx taze minor -w",
     "lint": "eslint . --fix"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^0.3.5",
-    "@formkit/auto-animate": "^0.8.0",
+    "@formkit/auto-animate": "^0.8.1",
     "@hebilicious/authjs-nuxt": "^0.3.5",
     "@nuxt/image": "^1.0.0",
     "@vueuse/motion": "^2.0.0",
     "@vueuse/nuxt": "^10.5.0",
-    "bun-types": "^1.0.8",
+    "bun-types": "^1.0.10",
     "drizzle-orm": "^0.28.6",
     "postgres": "^3.4.3",
     "theme-change": "^2.5.0",
-    "trpc-nuxt": "^0.10.12",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
@@ -41,10 +40,10 @@
     "drizzle-kit": "^0.19.13",
     "drizzle-zod": "^0.5.1",
     "eslint": "^8.53.0",
-    "nuxt": "^3.8.0",
-    "nuxt-icon": "^0.6.1",
+    "nuxt": "^3.8.1",
+    "nuxt-icon": "^0.6.5",
     "pg": "^8.11.3",
-    "vue": "^3.3.7",
+    "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   }
 }
