@@ -1,10 +1,6 @@
 import type { PostgresJsDatabase } from 'drizzle-orm/postgres-js'
 import { drizzle } from 'drizzle-orm/postgres-js'
-
 import postgres from 'postgres'
-
-
-
 
 // eslint-disable-next-line ts/ban-types
 let sql: postgres.Sql<{}> | null

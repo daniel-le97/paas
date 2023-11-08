@@ -3,6 +3,5 @@
   // if u want to use bun
   "compilerOptions": {
     "types": ["bun-types"]
-  },
-  "include": ["../components/**/*.server.ts"]
+  }
 }

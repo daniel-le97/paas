@@ -12,7 +12,8 @@
     "studio": "drizzle-kit studio",
     "push": "drizzle-kit push:pg",
     "sync": "pnpm run generate:server && pnpm run push",
-    "upgrade": "bun update && bunx taze -w && bunx taze major -w && bunx taze minor -w",
+    "update": "bun update && bunx taze -w && bunx taze major -w && bunx taze minor -w",
+    "upgrade": "bun upgrade --canary",
     "lint": "eslint . --fix"
   },
   "dependencies": {
@@ -30,7 +31,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^1.1.0",
-    "@auth/core": "^0.18.0",
+    "@auth/core": "^0.17.0",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/tailwindcss": "^6.9.4",
