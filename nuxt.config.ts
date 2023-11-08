@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/image',
     '@formkit/auto-animate/nuxt',
+    '@pinia/nuxt'
   ],
 
   colorMode: {
