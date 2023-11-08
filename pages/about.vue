@@ -58,8 +58,13 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
         </div>
       </div>
     </section>
+    <div class="divider " />
 
-    <TemplateBanner />
+   <section class="p-8">
+          <Testimonials />
+          <div class="divider " />
+
+      <TemplateBanner /></section>
   </main>
 </template>
 

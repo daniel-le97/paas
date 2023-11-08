@@ -46,29 +46,29 @@ onBeforeUnmount(() => {
         </label>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 text-base-content p-2 shadow rounded-box w-52"
+          class="menu menu-sm dropdown-content rounded-md mt-3 z-50 bg-base-100 text-base-content p-2 shadow  w-52"
         >
           <li v-motion-pop-visible>
-            <NuxtLink to="/" class="link" active-class="active-link">
+            <NuxtLink to="/" class="link" active-class="text-accent btn-accent">
               Home
             </NuxtLink>
           </li>
           <li v-motion-pop-visible>
-            <NuxtLink to="/about" class="link" active-class="active-link">
+            <NuxtLink to="/about" class="link" active-class="text-accent btn-accent">
               About
             </NuxtLink>
           </li>
           <li v-motion-pop-visible>
-            <NuxtLink to="/contact" class="link" active-class="active-link">
+            <NuxtLink to="/contact" class="link" active-class="text-accent btn-accent">
               Contact
             </NuxtLink>
           </li>
           <li v-motion-pop-visible>
-            <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
+            <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="text-accent btn-accent">
               Login
             </NuxtLink>
 
-            <NuxtLink v-else to="/account" class="link" active-class="active-link">
+            <NuxtLink v-else to="/account" class="link" active-class="text-accent btn-accent">
               Account
             </NuxtLink>
           </li>
