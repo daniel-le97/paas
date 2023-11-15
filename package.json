@@ -26,12 +26,8 @@
     "@vueuse/nuxt": "^10.6.0",
     "bun-types": "^1.0.11",
     "drizzle-orm": "^0.28.6",
-<<<<<<< HEAD
-    "pinia": "^2.1.7",
-=======
     "elysia": "^0.7.24",
     "execa": "^8.0.1",
->>>>>>> 0297e87 (prepare for nuxt ui)
     "postgres": "^3.4.3",
     "theme-change": "^2.5.0",
     "typescript": "^5.2.2"
