@@ -9,10 +9,10 @@ const { title, subtitle } = props
 
 <template>
   <div class="  my-8     flex-center   text-center">
-    <h1 class="   title   text-base-content   ">
+    <h1 class="   title      ">
       {{ title }}
     </h1>
-    <h2 class=" subtitle text-secondary  ">
+    <h2 class=" subtitle  ">
       {{ subtitle }}
     </h2>
   </div>

@@ -20,27 +20,16 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: [
-    '@nuxtjs/tailwindcss',
     'nuxt-icon',
     '@hebilicious/authjs-nuxt',
     '@vueuse/nuxt',
-    '@nuxtjs/color-mode',
     '@nuxt/image',
     '@formkit/auto-animate/nuxt',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxt/ui'
   ],
 
-  colorMode: {
-    classSuffix: '',
-    // preference: 'system', // default value of $colorMode.preference
-    // fallback: 'light', // fallback value if not system preference found
-    // hid: 'nuxt-color-mode-script',
-    // globalName: '__NUXT_COLOR_MODE__',
-    // componentName: 'ColorScheme',
-    // classPrefix: '',
-    // classSuffix: '-mode',
-    // storageKey: 'nuxt-color-mode'
-  },
+
   authJs: {
     // default configuration
     // verifyClientOnEveryRequest: true,
@@ -51,20 +40,8 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     config: {
-      // eslint-disable-next-line ts/no-require-imports
-      plugins: [require('daisyui')],
+
       darkMode: 'class',
-      daisyui: {
-        themes: true,
-      },
-      themes: {
-        extend: {
-          flex: {
-            'center': 'flex flex-col justify-center items-center',
-            'row-center': 'flex justify-center items-center',
-          },
-        },
-      },
     },
     exposeConfig: true,
     injectPosition: 'last',

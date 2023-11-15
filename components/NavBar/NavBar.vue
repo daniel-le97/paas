@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import ThemeButton from './ThemeButton.vue'
-import ProfileDropdown from './ProfileDropdown.vue'
 
+import Profile from './Profile.vue';
 const { session } = useAuth()
 const nav = ref(null)
 const navTransform = ref('translateY(0)')
@@ -35,51 +34,11 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="nav"
-    class="navbar  bg-base-100 "
+    class="   bg-white dark:bg-slate-950 flex items-center justify-between px-2 "
     :style="{ transform: navTransform }"
   >
     <div class="navbar-start">
-      <!-- //NOTE -  MOBILE MENU -->
-      <div class="dropdown">
-        <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
-          <Icon name="tdesign:hamburger" size="35" />
-        </label>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content rounded-md mt-3 z-50 bg-base-100 text-base-content p-2 shadow  w-52"
-        >
-          <li v-motion-pop-visible>
-            <NuxtLink to="/" class="link" active-class="text-accent btn-accent">
-              Home
-            </NuxtLink>
-          </li>
-          <li v-motion-pop-visible>
-            <NuxtLink to="/about" class="link" active-class="text-accent btn-accent">
-              About
-            </NuxtLink>
-          </li>
-          <li v-motion-pop-visible>
-            <NuxtLink to="/contact" class="link" active-class="text-accent btn-accent">
-              Contact
-            </NuxtLink>
-          </li>
-          <li v-motion-pop-visible>
-            <NuxtLink to="/repo" class="link" active-class="text-accent btn-accent">
-              repo
-            </NuxtLink>
-          </li>
-          <li v-motion-pop-visible>
-            <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="text-accent btn-accent">
-              Login
-            </NuxtLink>
 
-            <NuxtLink v-else to="/account" class="link" active-class="text-accent btn-accent">
-              Account
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-      <!-- //NOTE -  MOBILE MENU -->
       <a v-motion-pop-visible class="p-3 px-5 rounded-md text-xl font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
     </div>
     <div class="navbar-center hidden lg:flex">
@@ -115,16 +74,17 @@ onBeforeUnmount(() => {
         </li>
       </ul>
     </div>
-    <div class="navbar-end space-x-4">
-      <ThemeButton />
-      <ProfileDropdown v-if="session?.user" />
+    <div class="space-x-4">
+      Lorem ipsum dolor sit.
+<Profile/>
+
     </div>
   </div>
 </template>
 
 <style scoped>
 .navbar {
-  @apply flex-row fixed top-0 w-full p-3 transition-transform shadow-md duration-500 ease-in-out;
+  @apply flex-row fixed top-0 w-full  transition-transform shadow-md duration-500 ease-in-out;
   z-index: 100;
 }
 .active-link {
