@@ -1,4 +1,4 @@
-import { todos } from "../../db/schema/todos.js";
+import { todos } from '../../db/schema/todos.js'
 
 export default defineEventHandler(async (_event) => {
   const db = useDb()

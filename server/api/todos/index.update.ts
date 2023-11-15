@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm'
-import { insertTodoSchema, todos } from '~/server/db/schema/todos'
+import { todos } from '~/server/db/schema/todos'
 
 export default defineEventHandler(async (event) => {
   const db = useDb()

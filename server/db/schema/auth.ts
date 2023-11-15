@@ -15,8 +15,6 @@ export const users = pgTable('user', {
   image: text('image'),
 })
 
-
-
 export const accounts = pgTable(
   'account',
   {
@@ -58,6 +56,5 @@ export const verificationTokens = pgTable(
     compoundKey: primaryKey(vt.identifier, vt.token),
   }),
 )
-
 
 export type User = Zod.infer

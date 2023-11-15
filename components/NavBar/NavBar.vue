@@ -64,6 +64,11 @@ onBeforeUnmount(() => {
             </NuxtLink>
           </li>
           <li v-motion-pop-visible>
+            <NuxtLink to="/repo" class="link" active-class="text-accent btn-accent">
+              repo
+            </NuxtLink>
+          </li>
+          <li v-motion-pop-visible>
             <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="text-accent btn-accent">
               Login
             </NuxtLink>
@@ -94,11 +99,11 @@ onBeforeUnmount(() => {
             Contact
           </NuxtLink>
         </li>
-         <li v-motion-pop-visible>
-            <NuxtLink to="/repo" class="link" active-class="active-link">
-             Repos
-            </NuxtLink>
-          </li>
+        <li v-motion-pop-visible>
+          <NuxtLink to="/repo" class="link" active-class="active-link">
+            Repos
+          </NuxtLink>
+        </li>
         <li v-motion-pop-visible>
           <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
             Login

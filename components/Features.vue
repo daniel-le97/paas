@@ -4,7 +4,6 @@ import SectionHeader from './globals/SectionHeader.vue'
 
 const itemRefs = ref([])
 
-
 const plugins = [
   {
     name: 'Nuxt',

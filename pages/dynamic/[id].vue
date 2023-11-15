@@ -2,13 +2,13 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import SectionHeader from '../../components/globals/SectionHeader.vue'
-import mockData from '../../MOCK_DATA.json'
+import mockData from '~/Application_Mock_Data.json'
 
 const originalData = ref(mockData)
 const route = useRoute()
 
 const paramId = route.params.id
-const dynamicData = originalData.value.find(i => i.id.toString() === paramId)
+const dynamicData = computed(() => originalData.value.find(i => i.id.toString() === paramId))
 </script>
 
 <template>
@@ -29,7 +29,7 @@ const dynamicData = originalData.value.find(i => i.id.toString() === paramId)
           </h2>
           <ul class="menu  w-full rounded-box">
             <li class="btn btn-ghost">
-              {{ dynamicData.email }}
+              {{ dynamicData?.email }}
             </li>
             <li class="btn btn-ghost">
               {{ dynamicData.first_name }}, {{ dynamicData.last_name }}

@@ -1,16 +1,18 @@
 /* eslint-disable node/prefer-global/process */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-import { resolve } from "node:path"
-
+import { resolve } from 'node:path'
 
 export default defineNuxtConfig({
+  ignore: ['temp/*'],
+  // nitro: { preset: './preset' },
   experimental: {
     componentIslands: true,
+    asyncContext: true,
   },
   alias: {
     // if not using pnpm
-    cookie: resolve(__dirname, "node_modules/cookie")
+    cookie: resolve(process.cwd(), '/node_modules/cookie'),
     // cookie: 'cookie',
   },
   devtools: { enabled: true },
@@ -70,11 +72,6 @@ export default defineNuxtConfig({
 
   build: {
     transpile: ['trpc-nuxt'],
-  },
-
-
-  nitro: {
-    preset: "node-server"
   },
   runtimeConfig: {
     public: {
